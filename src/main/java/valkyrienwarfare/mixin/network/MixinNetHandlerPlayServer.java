@@ -1,12 +1,9 @@
 package valkyrienwarfare.mixin.network;
 
-import valkyrienwarfare.api.RotationMatrices;
-import valkyrienwarfare.api.Vector;
-import valkyrienwarfare.interaction.EntityDraggable;
-import valkyrienwarfare.interaction.IDraggable;
-import valkyrienwarfare.interaction.PlayerDataBackup;
-import valkyrienwarfare.physicsmanagement.PhysicsWrapperEntity;
-import valkyrienwarfare.ValkyrienWarfareMod;
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Overwrite;
+import org.spongepowered.asm.mixin.Shadow;
+
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayerMP;
@@ -30,9 +27,14 @@ import net.minecraft.util.text.TextComponentString;
 import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.WorldServer;
-import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Overwrite;
-import org.spongepowered.asm.mixin.Shadow;
+import new_vw.ShipPlayerProxyMP;
+import valkyrienwarfare.ValkyrienWarfareMod;
+import valkyrienwarfare.api.RotationMatrices;
+import valkyrienwarfare.api.Vector;
+import valkyrienwarfare.interaction.EntityDraggable;
+import valkyrienwarfare.interaction.IDraggable;
+import valkyrienwarfare.interaction.PlayerDataBackup;
+import valkyrienwarfare.physicsmanagement.PhysicsWrapperEntity;
 
 @Mixin(NetHandlerPlayServer.class)
 public abstract class MixinNetHandlerPlayServer {
@@ -59,9 +61,26 @@ public abstract class MixinNetHandlerPlayServer {
 	@Overwrite
 	public void processTryUseItemOnBlock(CPacketPlayerTryUseItemOnBlock packetIn) {
 		PacketThreadUtil.checkThreadAndEnqueue(packetIn, NetHandlerPlayServer.class.cast(this), this.player.getServerWorld());
+		if(player instanceof ShipPlayerProxyMP) {
+			processTryUseItemOnBlockOriginal(packetIn);
+		}
 		BlockPos packetPos = packetIn.getPos();
 		PlayerDataBackup playerBackup = new PlayerDataBackup(this.player);
 		PhysicsWrapperEntity wrapper = ValkyrienWarfareMod.physicsManager.getObjectManagingPos(player.world, packetPos);
+		
+		/*
+		if(wrapper == null) {
+			processTryUseItemOnBlockOriginal(packetIn);
+		}else{
+			ShipPlayerProxyMP proxyPlayer = new ShipPlayerProxyMP(player, wrapper);
+			EntityPlayerMP backup = player;
+			player = proxyPlayer;
+			proxyPlayer.syncProxyToPlayer();
+			processTryUseItemOnBlockOriginal(packetIn);
+			proxyPlayer.syncPlayerToProxy();
+			player = backup;
+		}*/
+
 		if (player.interactionManager.getBlockReachDistance() != dummyBlockReachDist) {
 			lastGoodBlockReachDist = player.interactionManager.getBlockReachDistance();
 		}

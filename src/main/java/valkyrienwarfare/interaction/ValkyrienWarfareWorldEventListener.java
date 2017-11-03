@@ -1,10 +1,5 @@
 package valkyrienwarfare.interaction;
 
-import valkyrienwarfare.api.RotationMatrices;
-import valkyrienwarfare.api.Vector;
-import valkyrienwarfare.physicsmanagement.PhysicsWrapperEntity;
-import valkyrienwarfare.ValkyrienWarfareMod;
-import valkyrienwarfare.addon.combat.entity.EntityMountingWeaponBase;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.item.EntityArmorStand;
@@ -20,6 +15,11 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.IWorldEventListener;
 import net.minecraft.world.World;
+import valkyrienwarfare.ValkyrienWarfareMod;
+import valkyrienwarfare.addon.combat.entity.EntityMountingWeaponBase;
+import valkyrienwarfare.api.RotationMatrices;
+import valkyrienwarfare.api.Vector;
+import valkyrienwarfare.physicsmanagement.PhysicsWrapperEntity;
 
 public class ValkyrienWarfareWorldEventListener implements IWorldEventListener {
 
