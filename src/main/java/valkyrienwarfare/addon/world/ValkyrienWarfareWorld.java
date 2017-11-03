@@ -25,7 +25,6 @@ public class ValkyrienWarfareWorld extends Module<ValkyrienWarfareWorldGen> {
 	
 	public ValkyrienWarfareWorld()   {
 		super("VW_World", new CommonProxyWorld(), new ClientProxyWorld(), null, "valkyrienwarfareworld");
-		INSTANCE = this;
 	}
 	private static final WorldEventsCommon worldEventsCommon = new WorldEventsCommon();
 	public static ValkyrienWarfareWorld INSTANCE;
@@ -79,6 +78,11 @@ public class ValkyrienWarfareWorld extends Module<ValkyrienWarfareWorldGen> {
 	@Override
 	protected void registerTileEntities() {
 		GameRegistry.registerTileEntity(TileEntitySkyTempleController.class, "skydungeon_controller");
+	}
+
+	@Override
+	protected void recordTheInstance(Module theRealOne) {
+		INSTANCE = (ValkyrienWarfareWorld) theRealOne;
 	}
 
 }

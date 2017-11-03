@@ -27,7 +27,6 @@ public class ValkyrienWarfareCombat extends Module<ValkyrienWarfareCombat> {
 	
 	public ValkyrienWarfareCombat()  {
 		super("VW_Combat", new CommonProxyCombat(), new ClientProxyCombat(), null, "valkyrienwarfarecombat");
-		INSTANCE = this;
 	}
 
 	public Item basicCannonSpawner;
@@ -79,6 +78,11 @@ public class ValkyrienWarfareCombat extends Module<ValkyrienWarfareCombat> {
 	protected void registerRecipes() {
 		GameRegistry.addRecipe(new ItemStack(cannonBall, 4), new Object[]{"II ", "II ", "   ", 'I', Items.IRON_INGOT});
 		GameRegistry.addRecipe(new ItemStack(powderPouch, 4), new Object[]{" S ", "SGS", " S ", 'S', Items.STRING, 'G', Items.GUNPOWDER});
+	}
+
+	@Override
+	protected void recordTheInstance(Module theRealOne) {
+		INSTANCE = (ValkyrienWarfareCombat) theRealOne;
 	}
 
 }

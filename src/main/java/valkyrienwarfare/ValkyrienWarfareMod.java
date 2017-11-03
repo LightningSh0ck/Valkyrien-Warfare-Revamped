@@ -318,10 +318,6 @@ public class ValkyrienWarfareMod {
 	public void postInit(FMLPostInitializationEvent event) {
 		proxy.postInit(event);
 		airStateIndex = Block.getStateId(Blocks.AIR.getDefaultState());
-		BlockPhysicsRegistration.registerCustomBlockMasses();
-		BlockPhysicsRegistration.registerVanillaBlockForces();
-		BlockPhysicsRegistration.registerBlocksToNotPhysicise();
-		
 		
 		ForgeChunkManager.setForcedChunkLoadingCallback(INSTANCE, new VWChunkLoadingCallback());
 		////We're stealing these tickets bois!////
@@ -348,6 +344,10 @@ public class ValkyrienWarfareMod {
 		for (Module addon : addons) {
 			addon.postInit(event);
 		}
+		
+		BlockPhysicsRegistration.registerCustomBlockMasses();
+		BlockPhysicsRegistration.registerVanillaBlockForces();
+		BlockPhysicsRegistration.registerBlocksToNotPhysicise();
 	}
 	
 	@EventHandler

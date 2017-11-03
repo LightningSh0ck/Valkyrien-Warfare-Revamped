@@ -80,7 +80,6 @@ public class ValkyrienWarfareControl extends Module<ValkyrienWarfareControl> {
 	
 	public ValkyrienWarfareControl() {
 		super("VW_Control", new ClientProxyControl(), new CommonProxyControl(), null, "valkyrienwarfarecontrol");
-		INSTANCE = this;
 	}
 	
 	@CapabilityInject(ICapabilityLastRelay.class)
@@ -277,5 +276,10 @@ public class ValkyrienWarfareControl extends Module<ValkyrienWarfareControl> {
 	@Override
 	protected void registerCapabilities() {
 		CapabilityManager.INSTANCE.register(ICapabilityLastRelay.class, new StorageLastRelay(), ImplCapabilityLastRelay.class);
+	}
+
+	@Override
+	protected void recordTheInstance(Module theRealOne) {
+		INSTANCE = (ValkyrienWarfareControl) theRealOne;
 	}
 }

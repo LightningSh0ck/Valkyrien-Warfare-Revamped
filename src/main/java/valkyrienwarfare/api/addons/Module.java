@@ -1,10 +1,10 @@
 package valkyrienwarfare.api.addons;
 
-import valkyrienwarfare.ValkyrienWarfareMod;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.event.FMLStateEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import valkyrienwarfare.ValkyrienWarfareMod;
 
 public abstract class Module<ImplName> {
 	private String name;
@@ -22,6 +22,8 @@ public abstract class Module<ImplName> {
 		this.client = client;
 		this.server = server;
 		this.modid = modid;
+		
+		recordTheInstance(this);
 	}
 	
 	public final void doRegisteringStuffPreInit()  {
@@ -100,4 +102,7 @@ public abstract class Module<ImplName> {
 	public final String getModID()  {
 		return modid;
 	}
+	
+	protected abstract void recordTheInstance(Module theRealOne);
+	
 }
