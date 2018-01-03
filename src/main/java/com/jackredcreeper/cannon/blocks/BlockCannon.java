@@ -24,7 +24,8 @@ import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.state.BlockStateContainer;
-import net.minecraft.block.state.IBlockState;
+//import net.minecraft.block.state.IBlockState;
+import comp1_7_10.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
@@ -49,11 +50,11 @@ public class BlockCannon extends BlockDirectional implements ITileEntityProvider
 		setResistance(1);
 		setResistance(1);
 
-		setUnlocalizedName(CannonModReference.ModBlocks.CANNON.getUnlocalizedName());
+		unlocalizedName = CannonModReference.ModBlocks.CANNON.getUnlocalizedName();
 		setRegistryName(CannonModReference.ModBlocks.CANNON.getRegistryName());
 
 		this.setDefaultState(this.blockState.getBaseState().withProperty(LOOKING, EnumFacing.NORTH));
-		this.setCreativeTab(CreativeTabs.COMBAT);
+		this.setCreativeTab(CreativeTabs.tabCombat);
 
 		int CannonCooldown = 0;
 		boolean CannonReady = false;

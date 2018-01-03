@@ -16,7 +16,8 @@
 package valkyrienwarfare.render;
 
 import valkyrienwarfare.physicsmanagement.PhysicsObject;
-import net.minecraft.block.state.IBlockState;
+//import net.minecraft.block.state.IBlockState;
+import comp1_7_10.IBlockState;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GLAllocation;
 import net.minecraft.client.renderer.GlStateManager;

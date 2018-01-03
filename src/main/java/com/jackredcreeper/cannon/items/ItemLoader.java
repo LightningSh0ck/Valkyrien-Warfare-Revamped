@@ -31,7 +31,7 @@ public class ItemLoader extends Item {
 		setUnlocalizedName(CannonModReference.ModItems.LOADER.getUnlocalizedName());
 		setRegistryName(CannonModReference.ModItems.LOADER.getRegistryName());
 
-		this.setCreativeTab(CreativeTabs.COMBAT);
+		this.setCreativeTab(CreativeTabs.tabCombat);
 		this.maxStackSize = 1;
 	}
 

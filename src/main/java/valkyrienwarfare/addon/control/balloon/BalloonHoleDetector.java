@@ -17,7 +17,8 @@ package valkyrienwarfare.addon.control.balloon;
 
 import valkyrienwarfare.relocation.SpatialDetector;
 import gnu.trove.set.hash.TIntHashSet;
-import net.minecraft.block.state.IBlockState;
+//import net.minecraft.block.state.IBlockState;
+import comp1_7_10.IBlockState;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockPos.MutableBlockPos;
 import net.minecraft.world.World;

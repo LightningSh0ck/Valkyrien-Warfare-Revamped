@@ -31,7 +31,7 @@ public class ItemExplosiveball extends Item {
 		setUnlocalizedName(CannonModReference.ModItems.EXPLOSIVEBALL.getUnlocalizedName());
 		setRegistryName(CannonModReference.ModItems.EXPLOSIVEBALL.getRegistryName());
 
-		this.setCreativeTab(CreativeTabs.COMBAT);
+		this.setCreativeTab(CreativeTabs.tabCombat);
 	}
 
 	@Override

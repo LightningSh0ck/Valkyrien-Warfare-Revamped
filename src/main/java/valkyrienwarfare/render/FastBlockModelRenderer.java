@@ -15,7 +15,8 @@
 
 package valkyrienwarfare.render;
 
-import net.minecraft.block.state.IBlockState;
+//import net.minecraft.block.state.IBlockState;
+import comp1_7_10.IBlockState;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.BlockRendererDispatcher;
 import net.minecraft.client.renderer.GLAllocation;

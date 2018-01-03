@@ -31,7 +31,7 @@ public class ItemPrimer extends Item {
 		setUnlocalizedName(CannonModReference.ModItems.PRIMER.getUnlocalizedName());
 		setRegistryName(CannonModReference.ModItems.PRIMER.getRegistryName());
 
-		this.setCreativeTab(CreativeTabs.COMBAT);
+		this.setCreativeTab(CreativeTabs.tabCombat);
 		this.maxStackSize = 1;
 	}
 

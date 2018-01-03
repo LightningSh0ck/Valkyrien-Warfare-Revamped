@@ -31,7 +31,7 @@ public class ItemSolidball extends Item {
 		setUnlocalizedName(CannonModReference.ModItems.SOLIDBALL.getUnlocalizedName());
 		setRegistryName(CannonModReference.ModItems.SOLIDBALL.getRegistryName());
 
-		this.setCreativeTab(CreativeTabs.COMBAT);
+		this.setCreativeTab(CreativeTabs.tabCombat);
 	}
 
 	@Override

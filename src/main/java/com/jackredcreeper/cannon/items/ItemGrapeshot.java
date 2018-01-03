@@ -31,7 +31,7 @@ public class ItemGrapeshot extends Item {
 		setUnlocalizedName(CannonModReference.ModItems.GRAPESHOT.getUnlocalizedName());
 		setRegistryName(CannonModReference.ModItems.GRAPESHOT.getRegistryName());
 
-		this.setCreativeTab(CreativeTabs.COMBAT);
+		this.setCreativeTab(CreativeTabs.tabCombat);
 	}
 
 	@Override

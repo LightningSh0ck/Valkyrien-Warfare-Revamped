@@ -19,7 +19,8 @@ import valkyrienwarfare.api.IBlockForceProvider;
 import valkyrienwarfare.api.Vector;
 import valkyrienwarfare.physicsmanagement.PhysicsObject;
 import net.minecraft.block.Block;
-import net.minecraft.block.state.IBlockState;
+//import net.minecraft.block.state.IBlockState;
+import comp1_7_10.IBlockState;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 

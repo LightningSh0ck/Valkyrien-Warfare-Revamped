@@ -22,7 +22,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.math.BlockPos;
+//import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 
@@ -34,11 +34,11 @@ public class BlockAirMine extends Block {
 		super(Material.IRON);
 		setHardness(0.5f);
 		setResistance(0.5f);
-
-		setUnlocalizedName(CannonModReference.ModBlocks.AIRMINE.getUnlocalizedName());
+        //perhaps create a custom setunlocalizedname method instead, but I think replacing is better
+		unlocalizedName = CannonModReference.ModBlocks.AIRMINE.getUnlocalizedName();
 		setRegistryName(CannonModReference.ModBlocks.AIRMINE.getRegistryName());
 
-		this.setCreativeTab(CreativeTabs.COMBAT);
+		this.setCreativeTab(CreativeTabs.tabCombat);
 
 	}
 

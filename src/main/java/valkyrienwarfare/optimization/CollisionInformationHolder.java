@@ -16,7 +16,8 @@
 package valkyrienwarfare.optimization;
 
 import valkyrienwarfare.collision.PhysPolygonCollider;
-import net.minecraft.block.state.IBlockState;
+//import net.minecraft.block.state.IBlockState;
+import comp1_7_10.IBlockState;
 
 public class CollisionInformationHolder {
 	
