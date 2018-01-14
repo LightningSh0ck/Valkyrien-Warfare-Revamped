@@ -31,10 +31,9 @@ import java.util.List;
 public class BlockAirMine extends Block {
 
 	public BlockAirMine() {
-		super(Material.IRON);
+		super(Material.iron);
 		setHardness(0.5f);
 		setResistance(0.5f);
-        //perhaps create a custom setunlocalizedname method instead, but I think replacing is better
 		unlocalizedName = CannonModReference.ModBlocks.AIRMINE.getUnlocalizedName();
 		setRegistryName(CannonModReference.ModBlocks.AIRMINE.getRegistryName());
 

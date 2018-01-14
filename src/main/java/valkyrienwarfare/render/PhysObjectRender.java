@@ -131,7 +131,7 @@ public class PhysObjectRender extends Render<PhysicsWrapperEntity> {
 			BlockPos blockpos = movingObjectPositionIn.getBlockPos();
 			IBlockState iblockstate = player.world.getBlockState(blockpos);
 
-			if (iblockstate.getMaterial() != Material.AIR && player.world.getWorldBorder().contains(blockpos)) {
+			if (iblockstate.getMaterial() != Material.air && player.world.getWorldBorder().contains(blockpos)) {
 				double d0 = 0;// player.lastTickPosX + (player.posX - player.lastTickPosX) * (double) partialTicks;
 				double d1 = 0;//player.lastTickPosY + (player.posY - player.lastTickPosY) * (double) partialTicks;
 				double d2 = 0;//player.lastTickPosZ + (player.posZ - player.lastTickPosZ) * (double) partialTicks;

@@ -48,7 +48,7 @@ public class EntityFallingUpBlock extends EntityFallingBlock {
 	public void onUpdate() {
 		Block block = this.fallTile.getBlock();
 
-		if (this.fallTile.getMaterial() == Material.AIR) {
+		if (this.fallTile.getMaterial() == Material.air) {
 			this.setDead();
 		} else {
 			this.prevPosX = this.posX;

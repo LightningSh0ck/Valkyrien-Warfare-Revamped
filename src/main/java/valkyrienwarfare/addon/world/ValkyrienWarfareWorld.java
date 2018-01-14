@@ -74,9 +74,12 @@ public class ValkyrienWarfareWorld extends Module<ValkyrienWarfareWorldGen> {
 	
 	@Override
 	protected void registerBlocks() {
-		etheriumOre = new BlockEtheriumOre(Material.ROCK).setHardness(3f).setUnlocalizedName("etheriumore").setRegistryName(getModID(), "etheriumore").setCreativeTab(ValkyrienWarfareMod.vwTab);
-		skydungeon_controller = new BlockSkyTempleController(Material.GLASS).setHardness(15f).setUnlocalizedName("skydungeon_controller").setRegistryName(getModID(), "skydungeon_controller").setCreativeTab(ValkyrienWarfareMod.vwTab);
-		quartz_fence = new BlockQuartzFence(Material.GLASS).setHardness(8f).setUnlocalizedName("quartz_fence").setRegistryName(getModID(), "quartz_fence").setCreativeTab(ValkyrienWarfareMod.vwTab);
+		etheriumOre = new BlockEtheriumOre(Material.rock).setHardness(3f).setRegistryName(getModID(), "etheriumore").setCreativeTab(ValkyrienWarfareMod.vwTab);
+		etheriumOre.unlocalizedName = "etheriumore";
+		skydungeon_controller = new BlockSkyTempleController(Material.glass).setHardness(15f).setRegistryName(getModID(), "skydungeon_controller").setCreativeTab(ValkyrienWarfareMod.vwTab);
+		skydungeon_controller.unlocalizedName = "skydungeon_controller";
+		quartz_fence = new BlockQuartzFence(Material.glass).setHardness(8f).setRegistryName(getModID(), "quartz_fence").setCreativeTab(ValkyrienWarfareMod.vwTab);
+		quartz_fence.unlocalizedName = "quartz_fence";
 
 		GameRegistry.register(etheriumOre);
 		GameRegistry.register(skydungeon_controller);

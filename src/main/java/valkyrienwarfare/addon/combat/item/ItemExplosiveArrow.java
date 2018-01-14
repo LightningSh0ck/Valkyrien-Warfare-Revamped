@@ -19,15 +19,15 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntityArrow;
 import net.minecraft.entity.projectile.EntityTippedArrow;
-import net.minecraft.item.ItemArrow;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 
 import java.util.List;
-
-public class ItemExplosiveArrow extends ItemArrow {
+// itemarrow is NOT a thing in 1.7!!! look 4 fix!
+public class ItemExplosiveArrow extends Item {
 
 	public ItemExplosiveArrow() {
 		super();

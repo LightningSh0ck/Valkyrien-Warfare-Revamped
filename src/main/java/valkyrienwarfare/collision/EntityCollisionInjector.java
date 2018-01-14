@@ -327,7 +327,7 @@ public class EntityCollisionInjector {
 //            entity.distanceWalkedModified = (float)((double)entity.distanceWalkedModified + (double)MathHelper.sqrt_double(d12 * d12 + d14 * d14) * 0.6D);
 //            entity.distanceWalkedOnStepModified = (float)((double)entity.distanceWalkedOnStepModified + (double)MathHelper.sqrt_double(d12 * d12 + d13 * d13 + d14 * d14) * 0.6D);
 
-			if (entity.distanceWalkedOnStepModified > (float) entity.nextStepDistance && iblockstate.getMaterial() != Material.AIR) {
+			if (entity.distanceWalkedOnStepModified > (float) entity.nextStepDistance && iblockstate.getMaterial() != Material.air) {
 				entity.nextStepDistance = (int) entity.distanceWalkedOnStepModified + 1;
 
                 /*if (this.isInWater())

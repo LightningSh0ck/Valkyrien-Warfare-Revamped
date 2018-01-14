@@ -126,7 +126,7 @@ public class NewExp2 extends Explosion {
 							BlockPos blockpos = new BlockPos(d4, d6, d8);
 							IBlockState iblockstate = this.worldObj.getBlockState(blockpos);
 
-							if (iblockstate.getMaterial() != Material.AIR) {
+							if (iblockstate.getMaterial() != Material.air) {
 								float f2 = this.exploder != null ? this.exploder.getExplosionResistance(this, this.worldObj, blockpos, iblockstate) : iblockstate.getBlock().getExplosionResistance(worldObj, blockpos, (Entity) null, this);
 								//  f -= ((f2 + 0.3F) * 0.3F) / this.explosionPower ;
 								f -= (f2 * this.explosionBlast) + this.explosionPower;
@@ -239,7 +239,7 @@ public class NewExp2 extends Explosion {
 				this.worldObj.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, d0, d1, d2, d3, d4, d5, new int[0]);
 			}
 
-			if (iblockstate.getMaterial() != Material.AIR) {
+			if (iblockstate.getMaterial() != Material.air) {
 				if (block.canDropFromExplosion(this)) {
 					block.dropBlockAsItemWithChance(this.worldObj, blockpos, this.worldObj.getBlockState(blockpos), 1.0F / this.explosionSize, 0);
 				}
@@ -251,7 +251,7 @@ public class NewExp2 extends Explosion {
 
 		if (this.isFlaming) {
 			for (BlockPos blockpos1 : this.affectedBlockPositions) {
-				if (this.worldObj.getBlockState(blockpos1).getMaterial() == Material.AIR && this.worldObj.getBlockState(blockpos1.down()).isFullBlock() && this.explosionRNG.nextInt(3) == 0) {
+				if (this.worldObj.getBlockState(blockpos1).getMaterial() == Material.air && this.worldObj.getBlockState(blockpos1.down()).isFullBlock() && this.explosionRNG.nextInt(3) == 0) {
 					this.worldObj.setBlockState(blockpos1, Blocks.FIRE.getDefaultState());
 				}
 			}

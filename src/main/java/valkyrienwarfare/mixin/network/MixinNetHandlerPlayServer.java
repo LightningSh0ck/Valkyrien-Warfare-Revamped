@@ -251,7 +251,7 @@ public abstract class MixinNetHandlerPlayServer {
 							this.player.interactionManager.cancelDestroyingBlock();
 						}
 
-						if (worldserver.getBlockState(blockpos).getMaterial() != Material.AIR) {
+						if (worldserver.getBlockState(blockpos).getMaterial() != Material.air) {
 							this.player.connection.sendPacket(new SPacketBlockChange(worldserver, blockpos));
 						}
 					}

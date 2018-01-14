@@ -121,7 +121,7 @@ public abstract class MixinRenderGlobal {
 							wrapper.wrapping.renderer.setupTranslation(partialTicks);
 							worldRendererIn.setTranslation(-wrapper.wrapping.renderer.offsetPos.getX(), -wrapper.wrapping.renderer.offsetPos.getY(), -wrapper.wrapping.renderer.offsetPos.getZ());
 						}
-						if (iblockstate.getMaterial() != Material.AIR) {
+						if (iblockstate.getMaterial() != Material.air) {
 							int i = destroyblockprogress.getPartialBlockDamage();
 							TextureAtlasSprite textureatlassprite = this.destroyBlockIcons[i];
 							BlockRendererDispatcher blockrendererdispatcher = this.mc.getBlockRendererDispatcher();
@@ -191,7 +191,7 @@ public abstract class MixinRenderGlobal {
 			BlockPos blockpos = movingObjectPositionIn.getBlockPos();
 			IBlockState iblockstate = this.world.getBlockState(blockpos);
 			
-			if (iblockstate.getMaterial() != Material.AIR && this.world.getWorldBorder().contains(blockpos)) {
+			if (iblockstate.getMaterial() != Material.air && this.world.getWorldBorder().contains(blockpos)) {
 				double d0 = player.lastTickPosX + (player.posX - player.lastTickPosX) * (double) partialTicks;
 				double d1 = player.lastTickPosY + (player.posY - player.lastTickPosY) * (double) partialTicks;
 				double d2 = player.lastTickPosZ + (player.posZ - player.lastTickPosZ) * (double) partialTicks;

@@ -88,8 +88,8 @@ public class ValkyrienWarfareCombat extends Module<ValkyrienWarfareCombat> {
 	
 	@Override
 	protected void registerBlocks() {
-		fakecannonblock = new FakeCannonBlock(Material.IRON).setHardness(5f).setUnlocalizedName("fakecannonblock").setRegistryName(getModID(), "fakecannonblock");
-
+		fakecannonblock = new FakeCannonBlock(Material.iron).setHardness(5f).setRegistryName(getModID(), "fakecannonblock");
+		fakecannonblock.unlocalizedName = "fakecannonblock";
 		GameRegistry.register(fakecannonblock);
 	}
 	

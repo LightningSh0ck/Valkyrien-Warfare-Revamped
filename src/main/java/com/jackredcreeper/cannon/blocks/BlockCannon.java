@@ -45,7 +45,7 @@ public class BlockCannon extends BlockDirectional implements ITileEntityProvider
 	public static final PropertyDirection LOOKING = BlockDirectional.FACING;
 
 	public BlockCannon() {
-		super(Material.IRON);
+		super(Material.iron);
 		setHardness(0.5f);
 		setResistance(1);
 		setResistance(1);

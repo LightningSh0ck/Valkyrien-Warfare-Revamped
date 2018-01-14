@@ -359,7 +359,7 @@ public abstract class MixinEntityIntrinsic {
 			BlockPos blockpos = new BlockPos(j6, i1, k6);
 			IBlockState iblockstate = this.world.getBlockState(blockpos);
 
-			if (iblockstate.getMaterial() == Material.AIR) {
+			if (iblockstate.getMaterial() == Material.air) {
 				BlockPos blockpos1 = blockpos.down();
 				IBlockState iblockstate1 = this.world.getBlockState(blockpos1);
 				Block block1 = iblockstate1.getBlock();
@@ -402,7 +402,7 @@ public abstract class MixinEntityIntrinsic {
 				thisClassAsAnEntity.distanceWalkedModified = (float) ((double) thisClassAsAnEntity.distanceWalkedModified + (double) MathHelper.sqrt(d15 * d15 + d17 * d17) * 0.6D);
 				thisClassAsAnEntity.distanceWalkedOnStepModified = (float) ((double) thisClassAsAnEntity.distanceWalkedOnStepModified + (double) MathHelper.sqrt(d15 * d15 + d16 * d16 + d17 * d17) * 0.6D);
 
-				if (thisClassAsAnEntity.distanceWalkedOnStepModified > (float) thisClassAsAnEntity.nextStepDistance && iblockstate.getMaterial() != Material.AIR) {
+				if (thisClassAsAnEntity.distanceWalkedOnStepModified > (float) thisClassAsAnEntity.nextStepDistance && iblockstate.getMaterial() != Material.air) {
 					thisClassAsAnEntity.nextStepDistance = (int) thisClassAsAnEntity.distanceWalkedOnStepModified + 1;
 
 					if (thisClassAsAnEntity.isInWater()) {

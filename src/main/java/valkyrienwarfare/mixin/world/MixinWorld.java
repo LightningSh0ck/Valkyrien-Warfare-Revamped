@@ -268,7 +268,7 @@ public abstract class MixinWorld {
 					IBlockState iblockstate1 = world.getBlockState(blockpos);
 					Block block1 = iblockstate1.getBlock();
 
-					if (!ignoreBlockWithoutBoundingBox || iblockstate1.getMaterial() == Material.PORTAL || iblockstate1.getCollisionBoundingBox(world, blockpos) != Block.NULL_AABB) {
+					if (!ignoreBlockWithoutBoundingBox || iblockstate1.getMaterial() == Material.portal || iblockstate1.getCollisionBoundingBox(world, blockpos) != Block.NULL_AABB) {
 						if (block1.canCollideCheck(iblockstate1, stopOnLiquid)) {
 							RayTraceResult raytraceresult1 = iblockstate1.collisionRayTrace(world, blockpos, vec31, vec32);
 

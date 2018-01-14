@@ -44,7 +44,7 @@ public class BlockEtheriumOre extends Block {
 	public static boolean canFallThrough(IBlockState state) {
 		Block block = state.getBlock();
 		Material material = state.getMaterial();
-		return block == Blocks.FIRE || material == Material.AIR || material == Material.WATER || material == Material.LAVA;
+		return block == Blocks.FIRE || material == Material.air || material == Material.water || material == Material.lava;
 	}
 
 	@Override
