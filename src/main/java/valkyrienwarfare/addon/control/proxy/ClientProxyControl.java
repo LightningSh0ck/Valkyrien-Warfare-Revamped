@@ -27,8 +27,8 @@ import net.minecraft.client.renderer.RenderItem;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.model.obj.OBJLoader;
-import net.minecraftforge.fml.client.registry.ClientRegistry;
-import net.minecraftforge.fml.common.event.FMLStateEvent;
+import cpw.mods.fml.client.registry.ClientRegistry;
+import cpw.mods.fml.common.event.FMLStateEvent;
 import valkyrienwarfare.addon.control.tileentity.*;
 
 public class ClientProxyControl extends CommonProxyControl {

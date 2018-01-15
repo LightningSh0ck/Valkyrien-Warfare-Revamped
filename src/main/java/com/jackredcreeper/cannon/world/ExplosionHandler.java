@@ -21,7 +21,7 @@ import com.jackredcreeper.cannon.entities.EntityGrapeshot;
 import com.jackredcreeper.cannon.entities.EntitySolidball;
 import net.minecraft.entity.Entity;
 import net.minecraftforge.event.world.ExplosionEvent;
-import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 
 public class ExplosionHandler {
 

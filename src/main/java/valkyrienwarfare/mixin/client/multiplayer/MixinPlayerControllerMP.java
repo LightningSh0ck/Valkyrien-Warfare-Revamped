@@ -112,8 +112,8 @@ public abstract class MixinPlayerControllerMP {
 				IBlockState iblockstate = worldIn.getBlockState(pos);
 				boolean bypass = itemstack.isEmpty() || itemstack.getItem().doesSneakBypassUse(itemstack, worldIn, pos, player);
 
-				if ((!player.isSneaking() || bypass || event.getUseBlock() == net.minecraftforge.fml.common.eventhandler.Event.Result.ALLOW)) {
-					if (event.getUseBlock() != net.minecraftforge.fml.common.eventhandler.Event.Result.DENY)
+				if ((!player.isSneaking() || bypass || event.getUseBlock() == cpw.mods.fml.common.eventhandler.Event.Result.ALLOW)) {
+					if (event.getUseBlock() != cpw.mods.fml.common.eventhandler.Event.Result.DENY)
 						flag = iblockstate.getBlock().onBlockActivated(worldIn, pos, iblockstate, player, hand, direction, f, f1, f2);
 					if (flag) result = EnumActionResult.SUCCESS;
 				}
@@ -129,7 +129,7 @@ public abstract class MixinPlayerControllerMP {
 
 			this.connection.sendPacket(new CPacketPlayerTryUseItemOnBlock(pos, direction, hand, f, f1, f2));
 
-			if (!flag && this.currentGameType != GameType.SPECTATOR || event.getUseItem() == net.minecraftforge.fml.common.eventhandler.Event.Result.ALLOW) {
+			if (!flag && this.currentGameType != GameType.SPECTATOR || event.getUseItem() == cpw.mods.fml.common.eventhandler.Event.Result.ALLOW) {
 				if (itemstack.isEmpty()) {
 					return EnumActionResult.PASS;
 				} else if (player.getCooldownTracker().hasCooldown(itemstack.getItem())) {
@@ -146,7 +146,7 @@ public abstract class MixinPlayerControllerMP {
 					if (this.currentGameType.isCreative()) {
 						int i = itemstack.getMetadata();
 						int j = itemstack.getCount();
-						if (event.getUseItem() != net.minecraftforge.fml.common.eventhandler.Event.Result.DENY) {
+						if (event.getUseItem() != cpw.mods.fml.common.eventhandler.Event.Result.DENY) {
 							EnumActionResult enumactionresult = itemstack.onItemUse(player, worldIn, pos, hand, direction, f, f1, f2);
 							itemstack.setItemDamage(i);
 							itemstack.setCount(j);
@@ -154,7 +154,7 @@ public abstract class MixinPlayerControllerMP {
 						} else return result;
 					} else {
 						ItemStack copyForUse = itemstack.copy();
-						if (event.getUseItem() != net.minecraftforge.fml.common.eventhandler.Event.Result.DENY)
+						if (event.getUseItem() != cpw.mods.fml.common.eventhandler.Event.Result.DENY)
 							result = itemstack.onItemUse(player, worldIn, pos, hand, direction, f, f1, f2);
 						if (itemstack.isEmpty())
 							net.minecraftforge.event.ForgeEventFactory.onPlayerDestroyItem(player, copyForUse, hand);

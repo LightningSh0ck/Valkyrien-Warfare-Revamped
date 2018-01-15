@@ -29,7 +29,7 @@ import net.minecraft.network.play.server.SPacketUpdateTileEntity;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import net.minecraftforge.fml.common.network.simpleimpl.MessageContext;
+import cpw.mods.fml.common.network.simpleimpl.MessageContext;
 
 import java.util.ArrayList;
 

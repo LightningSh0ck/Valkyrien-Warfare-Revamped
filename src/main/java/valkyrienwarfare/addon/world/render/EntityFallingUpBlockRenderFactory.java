@@ -19,7 +19,7 @@ import valkyrienwarfare.addon.world.EntityFallingUpBlock;
 import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.client.renderer.entity.RenderFallingBlock;
 import net.minecraft.client.renderer.entity.RenderManager;
-import net.minecraftforge.fml.client.registry.IRenderFactory;
+import cpw.mods.fml.client.registry.IRenderFactory;
 
 public class EntityFallingUpBlockRenderFactory implements IRenderFactory<EntityFallingUpBlock> {
 

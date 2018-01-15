@@ -20,9 +20,9 @@ import valkyrienwarfare.api.addons.ModuleProxy;
 import valkyrienwarfare.EventsServer;
 import valkyrienwarfare.ValkyrienWarfareMod;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.fml.common.event.FMLInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLPostInitializationEvent;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
 public class ServerProxy extends CommonProxy {
 

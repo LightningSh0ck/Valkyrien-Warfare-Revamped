@@ -25,7 +25,7 @@ import net.minecraft.world.chunk.IChunkGenerator;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
 import net.minecraft.world.gen.feature.WorldGenerator;
-import net.minecraftforge.fml.common.IWorldGenerator;
+import cpw.mods.fml.common.IWorldGenerator;
 
 import java.util.Random;
 

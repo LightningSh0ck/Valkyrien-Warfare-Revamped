@@ -21,7 +21,7 @@ import org.spongepowered.asm.launch.MixinBootstrap;
 import org.spongepowered.asm.mixin.MixinEnvironment;
 import org.spongepowered.asm.mixin.Mixins;
 
-import net.minecraftforge.fml.relauncher.IFMLLoadingPlugin;
+import cpw.mods.fml.relauncher.IFMLLoadingPlugin;
 
 public class MixinLoaderForge implements IFMLLoadingPlugin {
 

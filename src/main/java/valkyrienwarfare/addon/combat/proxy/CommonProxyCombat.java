@@ -16,7 +16,7 @@
 package valkyrienwarfare.addon.combat.proxy;
 
 import valkyrienwarfare.api.addons.ModuleProxy;
-import net.minecraftforge.fml.common.event.FMLStateEvent;
+import cpw.mods.fml.common.event.FMLStateEvent;
 
 public class CommonProxyCombat extends ModuleProxy {
 	public void preInit(FMLStateEvent e) {

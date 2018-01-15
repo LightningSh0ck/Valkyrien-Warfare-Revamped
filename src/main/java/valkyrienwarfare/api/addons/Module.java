@@ -17,8 +17,8 @@ package valkyrienwarfare.api.addons;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
-import net.minecraftforge.fml.common.event.FMLStateEvent;
-import net.minecraftforge.fml.common.registry.GameRegistry;
+import cpw.mods.fml.common.event.FMLStateEvent;
+import cpw.mods.fml.common.registry.GameRegistry;
 import valkyrienwarfare.ValkyrienWarfareMod;
 
 public abstract class Module<ImplName> {

@@ -63,7 +63,7 @@ import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.storage.ExtendedBlockStorage;
 import net.minecraft.world.gen.ChunkProviderServer;
 import net.minecraftforge.common.DimensionManager;
-import net.minecraftforge.fml.common.FMLCommonHandler;
+import cpw.mods.fml.common.FMLCommonHandler;
 
 import java.io.File;
 import java.io.IOException;

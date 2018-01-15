@@ -19,7 +19,7 @@ import valkyrienwarfare.addon.control.piloting.ControllerInputType;
 import io.netty.buffer.ByteBuf;
 import net.minecraft.network.PacketBuffer;
 import net.minecraft.util.math.BlockPos;
-import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
+import cpw.mods.fml.common.network.simpleimpl.IMessage;
 
 public class MessageStartPiloting implements IMessage {
 

@@ -22,7 +22,7 @@ import valkyrienwarfare.addon.control.network.ThrustModulatorGuiInputMessage;
 import valkyrienwarfare.addon.control.nodenetwork.Node;
 import valkyrienwarfare.addon.control.proxy.ClientProxyControl;
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraftforge.fml.common.network.simpleimpl.MessageContext;
+import cpw.mods.fml.common.network.simpleimpl.MessageContext;
 
 public class ThrustModulatorTileEntity extends ImplPhysicsProcessorNodeTileEntity {
 	

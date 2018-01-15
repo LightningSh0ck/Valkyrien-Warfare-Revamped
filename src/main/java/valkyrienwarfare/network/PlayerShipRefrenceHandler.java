@@ -20,9 +20,9 @@ import valkyrienwarfare.physicsmanagement.PhysicsWrapperEntity;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.util.IThreadListener;
 import net.minecraft.util.math.MathHelper;
-import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
-import net.minecraftforge.fml.common.network.simpleimpl.IMessageHandler;
-import net.minecraftforge.fml.common.network.simpleimpl.MessageContext;
+import cpw.mods.fml.common.network.simpleimpl.IMessage;
+import cpw.mods.fml.common.network.simpleimpl.IMessageHandler;
+import cpw.mods.fml.common.network.simpleimpl.MessageContext;
 
 public class PlayerShipRefrenceHandler implements IMessageHandler<PlayerShipRefrenceMessage, IMessage> {
 	

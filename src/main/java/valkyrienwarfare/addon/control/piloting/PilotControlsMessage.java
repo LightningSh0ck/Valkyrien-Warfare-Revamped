@@ -20,7 +20,7 @@ import valkyrienwarfare.VWKeyHandler;
 import io.netty.buffer.ByteBuf;
 import net.minecraft.network.PacketBuffer;
 import net.minecraft.util.math.BlockPos;
-import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
+import cpw.mods.fml.common.network.simpleimpl.IMessage;
 
 import java.util.UUID;
 

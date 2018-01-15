@@ -20,7 +20,7 @@ import valkyrienwarfare.physicsmanagement.PhysicsWrapperEntity;
 import io.netty.buffer.ByteBuf;
 import net.minecraft.entity.Entity;
 import net.minecraft.network.PacketBuffer;
-import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
+import cpw.mods.fml.common.network.simpleimpl.IMessage;
 
 import java.util.ArrayList;
 import java.util.List;

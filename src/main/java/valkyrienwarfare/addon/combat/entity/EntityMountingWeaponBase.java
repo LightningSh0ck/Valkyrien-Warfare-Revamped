@@ -30,7 +30,7 @@ import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
-import net.minecraftforge.fml.common.registry.IEntityAdditionalSpawnData;
+import cpw.mods.fml.common.registry.IEntityAdditionalSpawnData;
 
 import javax.annotation.Nullable;
 
