@@ -402,10 +402,8 @@ public class ValkyrienWarfareMod {
 	}
 	
 	private void registerBlocks(FMLStateEvent event) {
-		physicsInfuser = new BlockPhysicsInfuser(Material.rock).setHardness(12f).setRegistryName(MODID, "shipblock").setCreativeTab(vwTab);
-		physicsInfuser.unlocalizedName = "shipblock";
-		physicsInfuserCreative = new BlockPhysicsInfuserCreative(Material.rock).setHardness(12f).setRegistryName(MODID, "shipblockcreative").setCreativeTab(vwTab);
-		physicsInfuserCreative.unlocalizedName = "shipblockcreative";
+		physicsInfuser = new BlockPhysicsInfuser(Material.rock).setHardness(12f).setBlockName("shipblock").setRegistryName(MODID, "shipblock").setCreativeTab(vwTab);
+		physicsInfuserCreative = new BlockPhysicsInfuserCreative(Material.rock).setHardness(12f).setBlockName("shipblockcreative").setRegistryName(MODID, "shipblockcreative").setCreativeTab(vwTab);
 		registerBlock(physicsInfuser);
 		registerBlock(physicsInfuserCreative);
 	}

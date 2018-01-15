@@ -34,7 +34,7 @@ public class BlockAirMine extends Block {
 		super(Material.iron);
 		setHardness(0.5f);
 		setResistance(0.5f);
-		unlocalizedName = CannonModReference.ModBlocks.AIRMINE.getUnlocalizedName();
+		setBlockName(CannonModReference.ModBlocks.AIRMINE.getUnlocalizedName());
 		setRegistryName(CannonModReference.ModBlocks.AIRMINE.getRegistryName());
 
 		this.setCreativeTab(CreativeTabs.tabCombat);

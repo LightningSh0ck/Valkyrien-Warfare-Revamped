@@ -50,7 +50,7 @@ public class BlockCannon extends BlockDirectional implements ITileEntityProvider
 		setResistance(1);
 		setResistance(1);
 
-		unlocalizedName = CannonModReference.ModBlocks.CANNON.getUnlocalizedName();
+		setBlockName(CannonModReference.ModBlocks.CANNON.getUnlocalizedName());
 		setRegistryName(CannonModReference.ModBlocks.CANNON.getRegistryName());
 
 		this.setDefaultState(this.blockState.getBaseState().withProperty(LOOKING, EnumFacing.NORTH));

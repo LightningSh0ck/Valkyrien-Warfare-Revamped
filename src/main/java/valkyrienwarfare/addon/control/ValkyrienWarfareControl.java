@@ -167,60 +167,37 @@ public class ValkyrienWarfareControl extends Module<ValkyrienWarfareControl> {
 		double eliteEtherCompressorPower = config.get(Configuration.CATEGORY_GENERAL, "eliteEtherCompressorPower", 80000D, "engine power for the elite Ether Compressor").getDouble();
 		double ultimateEtherCompressorPower = config.get(Configuration.CATEGORY_GENERAL, "ultimateEtherCompressorPower", 100000D, "engine power for the ultimate Ether Compressor").getDouble();
 
-		basicEngine = new BlockNormalEngine(Material.wood, basicEnginePower).setHardness(5f).setRegistryName(getModID(), "basicengine").setCreativeTab(ValkyrienWarfareMod.vwTab);
-		basicEngine.unlocalizedName = "basicengine";
-		advancedEngine = new BlockNormalEngine(Material.rock, advancedEnginePower).setHardness(6f).setRegistryName(getModID(), "advancedengine").setCreativeTab(ValkyrienWarfareMod.vwTab);
-		advancedEngine.unlocalizedName = "advancedengine";
-		eliteEngine = new BlockNormalEngine(Material.iron, eliteEnginePower).setHardness(8f).setRegistryName(getModID(), "eliteengine").setCreativeTab(ValkyrienWarfareMod.vwTab);
-		eliteEngine.unlocalizedName = "eliteengine";
-		ultimateEngine = new BlockNormalEngine(Material.ground, ultimateEnginePower).setHardness(10f).setRegistryName(getModID(), "ultimateengine").setCreativeTab(ValkyrienWarfareMod.vwTab);
-		ultimateEngine.unlocalizedName = "ultimateengine";
-		redstoneEngine = new BlockRedstoneEngine(Material.redstoneLight, redstoneEnginePower).setHardness(7.0f).setRegistryName(getModID(), "redstoneengine").setCreativeTab(ValkyrienWarfareMod.vwTab);
-		redstoneEngine.unlocalizedName = "redstoneengine";
+		basicEngine = new BlockNormalEngine(Material.wood, basicEnginePower).setHardness(5f).setBlockName("basicengine").setRegistryName(getModID(), "basicengine").setCreativeTab(ValkyrienWarfareMod.vwTab);
+		advancedEngine = new BlockNormalEngine(Material.rock, advancedEnginePower).setHardness(6f).setBlockName("advancedengine").setRegistryName(getModID(), "advancedengine").setCreativeTab(ValkyrienWarfareMod.vwTab);
+		eliteEngine = new BlockNormalEngine(Material.iron, eliteEnginePower).setHardness(8f).setBlockName("eliteengine").setRegistryName(getModID(), "eliteengine").setCreativeTab(ValkyrienWarfareMod.vwTab);
+		ultimateEngine = new BlockNormalEngine(Material.iron, ultimateEnginePower).setHardness(10f).setBlockName("ultimateengine").setRegistryName(getModID(), "ultimateengine").setCreativeTab(ValkyrienWarfareMod.vwTab);
+		redstoneEngine = new BlockRedstoneEngine(Material.redstoneLight, redstoneEnginePower).setHardness(7.0f).setBlockName("redstoneengine").setRegistryName(getModID(), "redstoneengine").setCreativeTab(ValkyrienWarfareMod.vwTab);
 
-		antigravityEngine = new BlockNormalEtherCompressor(Material.wood, basicEtherCompressorPower).setHardness(8f).setRegistryName(getModID(), "antigravengine").setCreativeTab(ValkyrienWarfareMod.vwTab);
-		antigravityEngine.unlocalizedName = "antigravengine";
-		advancedEtherCompressor = new BlockNormalEtherCompressor(Material.rock, advancedEtherCompressorPower).setHardness(8f).setRegistryName(getModID(), "advancedethercompressor").setCreativeTab(ValkyrienWarfareMod.vwTab);
-		advancedEtherCompressor.unlocalizedName = "advancedethercompressor";
-		eliteEtherCompressor = new BlockNormalEtherCompressor(Material.iron, eliteEtherCompressorPower).setHardness(8f).setRegistryName(getModID(), "eliteethercompressor").setCreativeTab(ValkyrienWarfareMod.vwTab);
-		eliteEtherCompressor.unlocalizedName = "eliteethercompressor";
-		ultimateEtherCompressor = new BlockNormalEtherCompressor(Material.ground, ultimateEtherCompressorPower).setHardness(8f).setRegistryName(getModID(), "ultimateethercompressor").setCreativeTab(ValkyrienWarfareMod.vwTab);
-		ultimateEtherCompressor.unlocalizedName = "ultimateethercompressor";
+		antigravityEngine = new BlockNormalEtherCompressor(Material.wood, basicEtherCompressorPower).setHardness(8f).setBlockName("antigravengine").setRegistryName(getModID(), "antigravengine").setCreativeTab(ValkyrienWarfareMod.vwTab);
+		advancedEtherCompressor = new BlockNormalEtherCompressor(Material.rock, advancedEtherCompressorPower).setHardness(8f).setBlockName("advancedethercompressor").setRegistryName(getModID(), "advancedethercompressor").setCreativeTab(ValkyrienWarfareMod.vwTab);
+		eliteEtherCompressor = new BlockNormalEtherCompressor(Material.iron, eliteEtherCompressorPower).setHardness(8f).setBlockName("eliteethercompressor").setRegistryName(getModID(), "eliteethercompressor").setCreativeTab(ValkyrienWarfareMod.vwTab);
+		ultimateEtherCompressor = new BlockNormalEtherCompressor(Material.iron, ultimateEtherCompressorPower).setHardness(8f).setBlockName("ultimateethercompressor").setRegistryName(getModID(), "ultimateethercompressor").setCreativeTab(ValkyrienWarfareMod.vwTab);
 		//replaced barrier material with rock
-		creativeEtherCompressor = new BlockCreativeEtherCompressor(Material.rock, Double.MAX_VALUE / 4).setHardness(0.0f).setRegistryName(getModID(), "creativeethercompressor").setCreativeTab(ValkyrienWarfareMod.vwTab);
-		creativeEtherCompressor.unlocalizedName = "creativeethercompressor"
+		creativeEtherCompressor = new BlockCreativeEtherCompressor(Material.rock, Double.MAX_VALUE / 4).setHardness(0.0f).setBlockName("creativeethercompressor").setRegistryName(getModID(), "creativeethercompressor").setCreativeTab(ValkyrienWarfareMod.vwTab);
 
-		basicHoverController = new BlockHovercraftController(Material.iron).setHardness(10f).setRegistryName(getModID(), "basichovercraftcontroller").setCreativeTab(ValkyrienWarfareMod.vwTab);
-		basicHoverController.unlocalizedName = "basichovercraftcontroller";
-		dopedEtherium = new BlockDopedEtherium(Material.glass).setHardness(4f).setRegistryName(getModID(), "dopedetherium").setCreativeTab(ValkyrienWarfareMod.vwTab);
-		dopedEtherium.unlocalizedName = "dopedetherium";
-		balloonBurner = new BlockBalloonBurner(Material.iron).setHardness(4f).setRegistryName(getModID(), "balloonburner").setCreativeTab(ValkyrienWarfareMod.vwTab);
-		balloonBurner.unlocalizedName = "balloonburner";
-		pilotsChair = new BlockShipPilotsChair(Material.iron).setHardness(4f).setRegistryName(getModID(), "shippilotschair").setCreativeTab(ValkyrienWarfareMod.vwTab);
-		pilotsChair.unlocalizedName = "shippilotschair";
+		basicHoverController = new BlockHovercraftController(Material.iron).setHardness(10f).setBlockName("basichovercraftcontroller").setRegistryName(getModID(), "basichovercraftcontroller").setCreativeTab(ValkyrienWarfareMod.vwTab);
+		dopedEtherium = new BlockDopedEtherium(Material.glass).setHardness(4f).setBlockName("dopedetherium").setRegistryName(getModID(), "dopedetherium").setCreativeTab(ValkyrienWarfareMod.vwTab);
+		balloonBurner = new BlockBalloonBurner(Material.iron).setHardness(4f).setBlockName("balloonburner").setRegistryName(getModID(), "balloonburner").setCreativeTab(ValkyrienWarfareMod.vwTab);
+		pilotsChair = new BlockShipPilotsChair(Material.iron).setHardness(4f).setBlockName("shippilotschair").setRegistryName(getModID(), "shippilotschair").setCreativeTab(ValkyrienWarfareMod.vwTab);
 
-		passengerChair = new BlockShipPassengerChair(Material.iron).setHardness(4f).setRegistryName(getModID(), "shippassengerchair").setCreativeTab(ValkyrienWarfareMod.vwTab);
-		passengerChair.unlocalizedName = "shippassengerchair";
-		shipHelm = new BlockShipHelm(Material.wood).setHardness(4f).setRegistryName(getModID(), "shiphelm").setCreativeTab(ValkyrienWarfareMod.vwTab);
-		shipHelm.unlocalizedName = "shiphelm";
-		shipWheel = new BlockShipWheel(Material.wood).setHardness(5f).setRegistryName(getModID(), "shiphelmwheel");
-		shipWheel.unlocalizedName = "shiphelmwheel";
-		shipTelegraph = new BlockShipTelegraph(Material.wood).setHardness(5f).setRegistryName(getModID(), "shiptelegraph").setCreativeTab(ValkyrienWarfareMod.vwTab);
-		shipTelegraph.unlocalizedName = "shiptelegraph";
+		passengerChair = new BlockShipPassengerChair(Material.iron).setHardness(4f).setBlockName("shippassengerchair").setRegistryName(getModID(), "shippassengerchair").setCreativeTab(ValkyrienWarfareMod.vwTab);
+		shipHelm = new BlockShipHelm(Material.wood).setHardness(4f).setBlockName("shiphelm").setRegistryName(getModID(), "shiphelm").setCreativeTab(ValkyrienWarfareMod.vwTab);
+		shipWheel = new BlockShipWheel(Material.wood).setHardness(5f).setBlockName("shiphelmwheel").setRegistryName(getModID(), "shiphelmwheel");
+		shipTelegraph = new BlockShipTelegraph(Material.wood).setHardness(5f).setBlockName("shiptelegraph").setRegistryName(getModID(), "shiptelegraph").setCreativeTab(ValkyrienWarfareMod.vwTab);
 
-		thrustRelay = new BlockThrustRelay(Material.iron).setHardness(5f).setRegistryName(getModID(), "thrustrelay").setCreativeTab(ValkyrienWarfareMod.vwTab);
-		thrustRelay.unlocalizedName = "thrustrelay";
-		thrustModulator = new BlockThrustModulator(Material.iron).setHardness(8f).setRegistryName(getModID(), "thrustmodulator").setCreativeTab(ValkyrienWarfareMod.vwTab);
-		thrustModulator.unlocalizedName = "thrustmodulator";
+		thrustRelay = new BlockThrustRelay(Material.iron).setHardness(5f).setBlockName("thrustrelay").setRegistryName(getModID(), "thrustrelay").setCreativeTab(ValkyrienWarfareMod.vwTab);
+		thrustModulator = new BlockThrustModulator(Material.iron).setHardness(8f).setBlockName("thrustmodulator").setRegistryName(getModID(), "thrustmodulator").setCreativeTab(ValkyrienWarfareMod.vwTab);
 
-		shipHullSealer = new BlockShipHullSealer(Material.iron).setHardness(5f).setRegistryName(getModID(), "shiphullsealer").setCreativeTab(ValkyrienWarfareMod.vwTab);
-		shipHullSealer.unlocalizedName = "shiphullsealer";
+		shipHullSealer = new BlockShipHullSealer(Material.iron).setHardness(5f).setBlockName("shiphullsealer").setRegistryName(getModID(), "shiphullsealer").setCreativeTab(ValkyrienWarfareMod.vwTab);
 
-		airshipController_zepplin = new BlockAirshipController_Zepplin(Material.wood).setHardness(5f).setRegistryName(getModID(), "airshipcontroller_zepplin").setCreativeTab(ValkyrienWarfareMod.vwTab);
-		airshipController_zepplin.unlocalizedName = "airshipcontroller_zepplin";
+		airshipController_zepplin = new BlockAirshipController_Zepplin(Material.wood).setHardness(5f).setBlockName("airshipcontroller_zepplin").setRegistryName(getModID(), "airshipcontroller_zepplin").setCreativeTab(ValkyrienWarfareMod.vwTab);
 
-		gyroscope = new BlockGyroscope(Material.iron).setHardness(5f).setRegistryName(getModID(), "vw_gyroscope").setCreativeTab(ValkyrienWarfareMod.vwTab);
-		gyroscope.unlocalizedName = "vw_gyroscope";
+		gyroscope = new BlockGyroscope(Material.iron).setHardness(5f).setBlockName("vw_gyroscope").setRegistryName(getModID(), "vw_gyroscope").setCreativeTab(ValkyrienWarfareMod.vwTab);
 
 		registerBlock(basicEngine);
 		registerBlock(advancedEngine);
